@@ -218,9 +218,11 @@
         position: absolute;
         background: rgb(234, 224, 224);
         z-index: 0;
-        margin: 100px auto;
+        margin: 50px auto;
+        padding: 20px;
+        transition: opacity 1s ease, transform 0.3s ease;
         opacity: 0;
-        display: none;
+        display: block;
     }
 
     .letter2 h2 {
@@ -299,5 +301,6 @@
             opacity: 0;
         }
     }
+
 
 
