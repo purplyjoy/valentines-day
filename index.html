@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Valentine's Day</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <body>
+        <div class="flex items-center justify-center h-screen">
+            <div class="letter-container">
+                <h2>ASHEIA</h2>
+                <p>Hey there, pretty! Wala ka man ka-valentine ngayon, meron ka namang cute at mabait na bestfriend, which is me:> You're lucky ako bff mo kasi may kasama ka sa lahat ng trip mo sa buhay, through internet nga lang.
+                But it's okay, I always think of you as my friend both online and in real life kasi totoong tao ka naman, we're just not seeing each other in person because of distance. 
+                
+                <br><br>I made this for you because I wanna show you how much I love and appreciate you for the being my best friend, and thanking you for the bond we shared together. We met last year, August 2025, so that makes our friendship 6 months long. Yeah, it's been that long. 
+                Di ko rin namalayan na ganon na pala katagal, at sa tagal na yon di pa rin tayo nagmmeet. Pero okay lang, malay mo next year magkita na. Graduate ka na nyan sa senior high, and I'm really excited pag nagcollege kana. I hope na nakapagdecide kana ng kukunin mong program for college coz I'm rooting for you.
+                I really wish you a bright future kaya wag kana puro absent. Sana di kana lagi nagkakasakit, nalulungkot ako. Wag kana kasi puyat nang puyat kulit mo kasi eh. 
+
+                <br><br>Ash, I know you have struggles in life, thoughts bugging your mind, and things your overthink a lot, just remember I am here. I am your friend and I will be always here to listen to you (wag lang pag busy ako hehe). I'm gonna make time for you just to listen to whatever you wanna say. If you ever felt hurt, unheard, or misunderstood, tell me. If I ever made things that affected you badly, please open it up to me.
+                I am here to support you to whatever you do in life, basta kasama ako. I love you, Ash, I will always treasure the friendship we built and will continue being your best friend whatever circumstances life give us. I love you, and Happy Valentine's Day^^
+                </p>
+
+                <img src="right-arrow.png" alt="Right Arrow" class="arrow" onclick="open2ndPart()">
+            </div>
+            
+            <div class="letter2">
+                <h2>PICTURES NATIN><</h2>
+                <img src="photobooth.jpg" alt="Photobooth" class="photobooth">
+                <img src="plushie.jpg" alt="Plushie" class="plushie">
+
+                <img src="backArrow.png" alt="Back Arrow" class="backArrow" onclick="back()">
+
+                <button id="bigButton"
+                    onclick="popUp()" 
+                    style="position: absolute; width: 450px; height: 100px; z-index: 99999;">
+                </button>
+
+                <button id="bigButton"
+                    onclick="popUp()" 
+                    style="position: absolute; top: 400px; width: 450px; height: 100px; z-index: 99999;">
+                </button>
+
+                <button id="bigButton"
+                    onclick="popUp()" 
+                    style="position: absolute; top: 300px; width: 450px; height: 100px; z-index: 99999;">
+                </button>
+
+                 <button id="bigButton"
+                    onclick="popUp()" 
+                    style="position: absolute; top: 210px; width: 450px; height: 100px; text-align:left; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(255, 175, 175); z-index: 99999;">Click here</button>>
+                </button>
+            </div>
+
+            <div class="greeting-content">
+                <h1>HAPPY VALENTINE'S DAY!</h1>
+                <div class="mail-container">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    <div class="left2"></div>
+                    <div class="right2"></div>
+                    <div class="triangle-fill"></div>
+                    <button class="letter-button" onclick="openLetter()"button>
+
+                    <div class="letter"></div>
+                        <button class="mail-btn" onclick="openMail()">
+                        <span>Click to open</span> 
+                        </button>
+
+                        <script>
+                            
+                            function openMail() {
+                                document.querySelector(".mail-btn").style.display = "none";
+
+                                document.querySelector(".left2").style.opacity = "1";
+                                document.querySelector(".right2").style.opacity = "1";
+                                document.querySelector(".triangle-fill").style.opacity = "1";
+                                document.querySelector(".right").style.opacity = "0.3";
+                                document.querySelector(".left").style.opacity = "0.3";
+                                document.querySelector(".letter-button").style.opacity = "1";
+                                document.querySelector(".letter-button").style.pointerEvents = "auto";
+                            }
+
+                            function openLetter() {
+                                document.querySelector(".mail-container").style.opacity = "0";
+                                document.querySelector(".greeting-content h1").style.opacity = "0";
+                                document.querySelector(".letter-container").style.opacity = "1";
+                                document.querySelector(".letter-container h2").style.opacity = "1";
+                                document.querySelector(".letter-container p").style.opacity = "1";
+                                document.querySelector(".letter2").style.opacity = "0";
+                                document.querySelector(".letter-button").style.pointerEvents = "none";
+                            }
+
+                            function open2ndPart() {
+                                const bigBtn = document.getElementById('bigButton');
+                                bigBtn.style.display = 'block';
+                                document.querySelector(".letter-container").style.display = "none";
+                                document.querySelector(".letter2").style.display = "block";
+                                document.querySelector(".letter2").style.opacity = "1";
+                                document.querySelector(".letter2 h2").style.opacity = "1";
+                                document.querySelector(".letter2 p").style.opacity = "1";
+                                popUp();
+                            }
+
+
+                                
+// Array of image URLs - add your own images here
+const imageUrls = [
+    'hike.jpg',
+    '7128011153_140277708007710_1762487804861.png',
+    '7128011153_140277708007710_1762487768309.png',
+    '7128011153_138982609552525_1762278382293.png',
+    '7128011153_138982609552525_1762278356696.png',
+    '7128011153_138982609552525_1762278340880.png',
+    '7128011153_138982609552525_1762278215881.png',
+    '7128011153_138982609552525_1762278215881.png',
+    '7128011153_138982609552525_1762278201376.png',
+    '7128011153_138982609552525_1762278111811.png',
+    '7128011153_138003227569046_1767712160760.png',
+    '7128011153_138003227569046_1767711463377.png',
+    '7128011153_138003227569046_1767711438036.png',
+    '7128011153_138003227569046_1767710502813.png',
+    '7128011153_138003227569046_1767710478118.png',
+    '7128011153_132685446068073_1762276895168.png',
+    '7128011153_132685446068073_1762276790492.png',
+    '7128011153_114281010659299_1768585152144.png',
+    '7128011153_114281010659299_1768584781993.png',
+    '7128011153_103504621837181_1768671328620.png',
+    '7128011153_74052392386319_1766764626146.png',
+    '7128011153_77006923870243_1766847325588.png',
+    '7128011153_74052392386319_1766762307810.png',
+    '7128011153_71979112397373_1762146092100.png',
+    '7128011153_71979112397373_1762146478106.png',
+    '7128011153_78464573554183_1767275762896.png',
+    '7128011153_93483624197671_1761485243958.png',
+    '7128011153_71979112397373_1762146092100.png',
+    '7128011153_71979112397373_1762146378604.png',
+    '7128011153_74052392386319_1766762307810.png',
+    '7128011153_74052392386319_1766762395374.png',
+    '7128011153_74052392386319_1766764626146.png',
+    '7128011153_80415403209989_1767280283690.png',
+    '7128011153_80415403209989_1767280654726.png',
+    '7128011153_80415403209989_1767280672204.png',
+    '7128011153_80415403209989_1767280725004.png',
+    '7128011153_93483624197671_1761485207034.png',
+    '7128011153_114281010659299_1768584306709.png',
+    '7128011153_114281010659299_1768585132977.png',
+    '7128011153_118056548571889_1767289538615.png',
+    '7128011153_118056548571889_1767289770030.png',
+    '7128011153_121215243489484_1766852197916.png',
+    '7128011153_132685446068073_1762275128425.png',
+    '7128011153_138003227569046_1767710478118.png'
+];
+
+function popUp() {
+    // Create multiple photos for confetti effect
+    const photosPerClick = 15;
+    
+    // Get random position on screen
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight * 0.3; // Start from top 30%
+    
+    for (let i = 0; i < photosPerClick; i++) {
+        setTimeout(() => {
+            createPhoto(x, y);
+        }, i * 50);
+    }
+}
+
+function createPhoto(x, y) {
+    const photo = document.createElement('div');
+    photo.className = 'photo-confetti';
+    
+    // Add image
+    const img = document.createElement('img');
+    img.src = imageUrls[Math.floor(Math.random() * imageUrls.length)];
+    photo.appendChild(img);
+    
+    // Random starting position
+    const offsetX = (Math.random() - 0.5) * 100;
+    const offsetY = (Math.random() - 0.5) * 50;
+    photo.style.left = (x + offsetX) + 'px';
+    photo.style.top = (y + offsetY) + 'px';
+    
+    // Random rotation
+    const rotateStart = Math.random() * 360;
+    const rotateEnd = rotateStart + (Math.random() - 0.5) * 720;
+    photo.style.setProperty('--rotate-start', rotateStart + 'deg');
+    photo.style.setProperty('--rotate-end', rotateEnd + 'deg');
+    
+    // Random animation duration
+    const duration = 5 + Math.random() * 2;
+    photo.style.animationDuration = duration + 's';
+    
+    document.body.appendChild(photo);
+    
+    // Remove photo after animation
+    setTimeout(() => {
+        photo.remove();
+    }, duration * 1000);
+}
+                            function back() {
+                                document.querySelector(".letter2").style.display = "none";
+                                document.querySelector(".letter-container").style.display = "block";
+                                document.querySelector(".letter-container").style.opacity = "1";
+                                document.querySelector(".letter-container h2").style.opacity = "1";
+                                document.querySelector(".letter-container p").style.opacity = "1";
+                            }
+
+                        </script>   
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

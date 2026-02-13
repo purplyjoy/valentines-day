@@ -1,0 +1,296 @@
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* prevent horizontal scroll if lines stick out */
+        background-color: #ca4853; /* match your main page color */
+    }
+    body {
+        background: linear-gradient(135deg, rgba(234, 102, 219, 0.8), rgba(118, 75, 162, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="1200" height="600" fill="url(%23grid)"/></svg>');
+        font-family: 'Arial', sans-serif;
+        color: #f6f6f6;
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
+
+    .greeting-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .greeting-content h1 {
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 50px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: #c60808;
+    }
+
+    .mail-container {
+        position: relative;
+        width: 320px;
+        height: 240px;
+        background-color: #ca4853;
+        margin: 100px auto;
+        opacity: ;
+    }
+
+    .left, .right {
+        position: absolute;
+        width: 223px;
+        height: 4px;
+        background-color: #ca4853;
+        top: 0;
+        transition: opacity 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    .left  {
+        left: 6px; 
+        transform: rotate(45deg); 
+        transform-origin: top left;
+    }
+
+    .right {
+        right: 6px;
+        transform: rotate(-45deg);
+        transform-origin: top right;
+    }
+
+    .left2, .right2 {
+        position: absolute;
+        width: 226px;
+        height: 4px;
+        background-color: #ca4853;
+        top: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .left2 {
+        left: 0;
+        transform: rotate(-45deg); 
+        transform-origin: top left;
+    }
+
+    .right2 {
+        right: 0;
+        transform: rotate(45deg);
+        transform-origin: top right;
+    }
+
+    .triangle-fill {
+        position: absolute;
+        bottom: 240px;
+        left: 5.5px;
+        width: 310px;
+        height: 155px; 
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        background-color: #ca4853;
+        border: 4px solid #bb404a;
+    }
+
+
+    .mail-btn {
+        position: relative;
+        top: 120px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 70px;    
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+
+    .mail-btn::before,
+    .mail-btn::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 80px;
+        background: rgb(246, 59, 59);
+        border-radius: 50px 50px 0 0;
+        top: 0;
+        left: 40px;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+        z-index: 0;
+    }
+
+    .mail-btn::after {
+        left: auto;
+        right: 40px;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+    }
+
+    .mail-btn:hover {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .mail-btn span {
+        position: relative;
+        z-index: 2; 
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        pointer-events: none; 
+    }
+
+    .letter-button {
+        position: absolute;
+        top: 15px;  
+        left: 20px; 
+        width: 280px;  
+        height: 140px; 
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        pointer-events: none;
+        background: rgb(234, 224, 224); 
+        clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+        z-index: 4;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 1s ease;
+        transform-origin: 50% 100%;
+    }
+
+    .letter-button:hover {
+        transform: scale(1.1);
+    }
+
+    .letter-container {
+        position: absolute;
+        width: 450px;
+        height: 600px;
+        background: rgb(234, 224, 224);
+        z-index: 0;
+        margin: 100px auto;
+        transition: opacity 1s ease, transform 0.3s ease;
+        opacity: 0;
+        display: block;
+    }
+
+    .letter-container h2 {
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 50px;
+        font-family:'Brush Script MT', 'cursive';
+        color: #000000;
+        opacity: 0;
+    }
+
+    .letter-container p {
+        font-size: 12px;
+        margin-top: -40px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: justify;
+        font-family:cursive;
+        color: #000000; 
+        opacity: 0;
+    }
+
+    .arrow { 
+        position: absolute;
+        width: 40px;
+        height: auto;
+        bottom: 1%;
+        right: 3%;
+        cursor: pointer;
+        pointer-events: auto;
+        z-index: 100;
+    }
+
+    .letter2 {
+        position: absolute;
+        width: 450px;
+        height: 600px;
+        background: rgb(234, 224, 224);
+        z-index: 0;
+        margin: 100px auto;
+        opacity: 0;
+        display: none;
+    }
+
+    .letter2 h2 {
+        font-size: 40px;
+        text-align: center;
+        font-family:'Brush Script MT', 'cursive';
+        color: #000000;
+    }
+
+    .photobooth {
+        position: absolute;
+        width: 400px;
+        height: auto;
+        top: 10%;
+        left: 6%;
+    }
+
+    .backArrow {
+        position: absolute;
+        width: 40px;
+        height: auto;
+        bottom: 1%;
+        left: 3%;
+        cursor: pointer;
+    }
+
+    .letter2 h3 {
+        position: absolute;
+        top: 250px;
+        left: 120px;
+        text-align: center;
+        font-size: 40px;
+        font-family:'Brush Script MT', 'cursive';
+        color: #000000;
+    }
+
+    .plushie {
+        position: absolute;
+        width: 400px;
+        height: auto;
+        top: 50%;
+        left: 6%;
+        align-items: center;
+    }
+
+    .photo-confetti {
+        position: fixed;
+        width: 80px;
+        height: 100px;
+        background: white;
+        border: 3px solid #fff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        pointer-events: none;
+        animation: fall 3s ease-out forwards;
+        transform-origin: center;
+        z-index: 9999;
+    }
+
+    .photo-confetti img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @keyframes fall {
+        0% {
+            transform: translateY(0) rotate(0deg) scale(0);
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+            transform: translateY(-50px) rotate(var(--rotate-start)) scale(1);
+        }
+        100% {
+            transform: translateY(100vh) rotate(var(--rotate-end)) scale(0.8);
+            opacity: 0;
+        }
+    }
