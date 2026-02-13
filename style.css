@@ -1,3 +1,10 @@
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* prevent horizontal scroll if lines stick out */
+        background-color: #ca4853; /* match your main page color */
+    }
+    
     body {
         background: linear-gradient(135deg, rgba(234, 102, 219, 0.8), rgba(118, 75, 162, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="1200" height="600" fill="url(%23grid)"/></svg>');
         font-family: 'Arial', sans-serif;
@@ -203,56 +210,87 @@
 
     .letter2 {
         position: absolute;
-        width: 450px;
-        height: 600px;
+        width: 90%;
+        max-width: 450px;
+        height: auto;
+        min-height: 600px;
         background: rgb(234, 224, 224);
         z-index: 0;
         margin: 100px auto;
         opacity: 0;
         display: none;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-bottom: 20px;
     }
 
     .letter2 h2 {
-        font-size: 40px;
+        font-size: clamp(24px, 6vw, 40px);
         text-align: center;
         font-family:'Brush Script MT', 'cursive';
         color: #000000;
+        padding: 20px 10px 10px;
     }
 
     .photobooth {
-        position: absolute;
-        width: 400px;
+        position: relative;
+        width: 90%;
+        max-width: 400px;
         height: auto;
-        top: 10%;
-        left: 6%;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 20px 0;
     }
 
     .backArrow {
         position: absolute;
         width: 40px;
         height: auto;
-        bottom: 1%;
-        left: 3%;
+        bottom: 10px;
+        left: 10px;
         cursor: pointer;
+        z-index: 10;
     }
 
     .letter2 h3 {
-        position: absolute;
-        top: 250px;
-        left: 120px;
+        position: relative;
+        top: auto;
+        left: auto;
         text-align: center;
-        font-size: 40px;
+        font-size: clamp(24px, 6vw, 40px);
         font-family:'Brush Script MT', 'cursive';
         color: #000000;
+        padding: 20px 10px;
+        margin: 0;
     }
 
     .plushie {
-        position: absolute;
-        width: 400px;
+        position: relative;
+        width: 90%;
+        max-width: 400px;
         height: auto;
-        top: 50%;
-        left: 6%;
-        align-items: center;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 20px 0;
+    }
+
+    @media (max-width: 768px) {
+        .letter2 {
+            width: 95%;
+            margin: 50px auto;
+        }
+        
+        .arrow {
+            width: 35px;
+            bottom: 10px;
+            right: 10px;
+        }
+        
+        .backArrow {
+            width: 35px;
+        }
     }
 
     .photo-confetti {
