@@ -211,19 +211,22 @@
     }
 
     .letter2 {
-        width: min(450px, 90vw);  
+        position: absolute;
+        width: min(450px, 90vw);
         max-width: 90%;
         height: auto; 
         min-height: min(600px, 150vw);
-        position: absolute;
         background: rgb(234, 224, 224);
         z-index: 0;
         margin: 50px auto;
         padding: 20px;
-        transition: opacity 1s ease, transform 0.3s ease;
+        box-sizing: border-box;
         opacity: 0;
-        display: block;
+        display: none;
+        left: 50%; 
+        transform: translateX(-50%); 
     }
+    
 
     .letter2 h2 {
         font-size: 40px;
@@ -301,6 +304,7 @@
             opacity: 0;
         }
     }
+
 
 
 
