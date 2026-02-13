@@ -159,6 +159,7 @@
     }
 
     .letter-container {
+        left:10px;
         position: absolute;
         width: 450px;
         height: 600px;
@@ -288,4 +289,5 @@
             opacity: 0;
         }
     }
+
 
