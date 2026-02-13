@@ -1,193 +1,348 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Valentine's Day</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <body>
-        <div class="flex items-center justify-center h-screen">
-            <div class="letter-container">
-                <h2>ASHEIA</h2>
-                <p>Hey there, pretty! Wala ka man ka-valentine ngayon, meron ka namang cute at mabait na bestfriend, which is me:> You're lucky ako bff mo kasi may kasama ka sa lahat ng trip mo sa buhay, through internet nga lang.
-                But it's okay, I always think of you as my friend both online and in real life kasi totoong tao ka naman, we're just not seeing each other in person because of distance. 
-                
-                <br><br>I made this for you because I wanna show you how much I love and appreciate you for the being my best friend, and thanking you for the bond we shared together. We met last year, August 2025, so that makes our friendship 6 months long. Yeah, it's been that long. 
-                Di ko rin namalayan na ganon na pala katagal, at sa tagal na yon di pa rin tayo nagmmeet. Pero okay lang, malay mo next year magkita na. Graduate ka na nyan sa senior high, and I'm really excited pag nagcollege kana. I hope na nakapagdecide kana ng kukunin mong program for college coz I'm rooting for you.
-                I really wish you a bright future kaya wag kana puro absent. Sana di kana lagi nagkakasakit, nalulungkot ako. Wag kana kasi puyat nang puyat kulit mo kasi eh. 
-
-                <br><br>Ash, I know you have struggles in life, thoughts bugging your mind, and things your overthink a lot, just remember I am here. I am your friend and I will be always here to listen to you (wag lang pag busy ako hehe). I'm gonna make time for you just to listen to whatever you wanna say. If you ever felt hurt, unheard, or misunderstood, tell me. If I ever made things that affected you badly, please open it up to me.
-                I am here to support you to whatever you do in life, basta kasama ako. I love you, Ash, I will always treasure the friendship we built and will continue being your best friend whatever circumstances life give us. I love you, and Happy Valentine's Day^^
-                </p>
-
-                <img src="right-arrow.png" alt="Right Arrow" class="arrow" onclick="open2ndPart()">
-            </div>
-            
-            <div class="letter2">
-                <h2>PICTURES NATIN><</h2>
-                <img src="photobooth.jpg" alt="Photobooth" class="photobooth">
-                <img src="plushie.jpg" alt="Plushie" class="plushie">
-
-                <img src="backArrow.png" alt="Back Arrow" class="backArrow" onclick="back()">
-
-                <button id="bigButton"
-                    onclick="popUp()" 
-                    style="position: absolute; width: 450px; height: 100px; z-index: 99999;">
-                </button>
-
-                <button id="bigButton"
-                    onclick="popUp()" 
-                    style="position: absolute; top: 400px; width: 450px; height: 100px; z-index: 99999;">
-                </button>
-
-                <button id="bigButton"
-                    onclick="popUp()" 
-                    style="position: absolute; top: 300px; width: 450px; height: 100px; z-index: 99999;">
-                </button>
-
-                 <button id="bigButton"
-                    onclick="popUp()" 
-                    style="position: absolute; top: 500px; width: 450px; height: 100px; text-align:center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(255, 175, 175); z-index: 99999;">Click here</button>
-                </button>
-            </div>
-
-            <div class="greeting-content">
-                <h1>HAPPY VALENTINE'S DAY!</h1>
-                <div class="mail-container">
-                    <div class="left"></div>
-                    <div class="right"></div>
-                    <div class="left2"></div>
-                    <div class="right2"></div>
-                    <div class="triangle-fill"></div>
-                    <button class="letter-button" onclick="openLetter()"button>
-
-                    <div class="letter"></div>
-                        <button class="mail-btn" onclick="openMail()">
-                        <span>Click to open</span> 
-                        </button>
-
-                        <script>
-                            
-                            function openMail() {
-                                document.querySelector(".mail-btn").style.display = "none";
-
-                                document.querySelector(".left2").style.opacity = "1";
-                                document.querySelector(".right2").style.opacity = "1";
-                                document.querySelector(".triangle-fill").style.opacity = "1";
-                                document.querySelector(".right").style.opacity = "0.3";
-                                document.querySelector(".left").style.opacity = "0.3";
-                                document.querySelector(".letter-button").style.opacity = "1";
-                                document.querySelector(".letter-button").style.pointerEvents = "auto";
-                            }
-
-                            function openLetter() {
-                                document.querySelector(".mail-container").style.opacity = "0";
-                                document.querySelector(".greeting-content h1").style.opacity = "0";
-                                document.querySelector(".letter-container").style.opacity = "1";
-                                document.querySelector(".letter-container h2").style.opacity = "1";
-                                document.querySelector(".letter-container p").style.opacity = "1";
-                                document.querySelector(".letter2").style.opacity = "0";
-                                document.querySelector(".letter-button").style.pointerEvents = "none";
-                            }
-
-                            function open2ndPart() {
-                                const bigBtn = document.getElementById('bigButton');
-                                bigBtn.style.display = 'block';
-                                document.querySelector(".letter-container").style.display = "none";
-                                document.querySelector(".letter2").style.display = "block";
-                                document.querySelector(".letter2").style.opacity = "1";
-                                document.querySelector(".letter2 h2").style.opacity = "1";
-                                document.querySelector(".letter2 p").style.opacity = "1";
-                                popUp();
-                            }
-
-
-                                
-// Array of image URLs - add your own images here
-const imageUrls = [
-    'hike.jpg',
-    '7128011153_74052392386319_1766762395374.png',
-    '7128011153_132685446068073_1762276790492.png',
-    '7128011153_132685446068073_1762276606002.png',
-    '7128011153_132685446068073_1762276589600.png',
-    '7128011153_132685446068073_1762276575402.png',
-    '7128011153_132685446068073_1762276088233.png',
-    '7128011153_132685446068073_1762275128425.png',
-    '7128011153_127776458261951_1768581045424.png',
-    '7128011153_127776458261951_1768581027990.png',
-    '7128011153_80415403209989_1767280283690.png',
-    '7128011153_78464573554183_1767275762896.png',
-    '7128011153_77006923870243_1766847325588.png',
-    '7128011153_77006923870243_1766847307409.png',
-    '7128011153_77006923870243_1766847307409.png',
-    '7128011153_74052392386319_1766764626146.png',
-    '7128011153_74052392386319_1766764581856.png',
-    '7128011153_74052392386319_1766764564275.png',
-    '7128011153_74052392386319_1766762395374.png'
-];
-
-function popUp() {
-    // Create multiple photos for confetti effect
-    const photosPerClick = 15;
-    
-    // Get random position on screen
-    const x = Math.random() * window.innerWidth;
-    const y = Math.random() * window.innerHeight * 0.3; // Start from top 30%
-    
-    for (let i = 0; i < photosPerClick; i++) {
-        setTimeout(() => {
-            createPhoto(x, y);
-        }, i * 50);
+body {
+        background: linear-gradient(135deg, rgba(234, 102, 219, 0.8), rgba(118, 75, 162, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="1200" height="600" fill="url(%23grid)"/></svg>');
+        font-family: 'Arial', sans-serif;
+        color: #f6f6f6;
+        line-height: 1.6;
+        overflow-x: hidden;
+        min-height: 100vh;
+        padding: 10px;
+        box-sizing: border-box;
     }
-}
 
-function createPhoto(x, y) {
-    const photo = document.createElement('div');
-    photo.className = 'photo-confetti';
-    
-    // Add image
-    const img = document.createElement('img');
-    img.src = imageUrls[Math.floor(Math.random() * imageUrls.length)];
-    photo.appendChild(img);
-    
-    // Random starting position
-    const offsetX = (Math.random() - 0.5) * 100;
-    const offsetY = (Math.random() - 0.5) * 50;
-    photo.style.left = (x + offsetX) + 'px';
-    photo.style.top = (y + offsetY) + 'px';
-    
-    // Random rotation
-    const rotateStart = Math.random() * 360;
-    const rotateEnd = rotateStart + (Math.random() - 0.5) * 720;
-    photo.style.setProperty('--rotate-start', rotateStart + 'deg');
-    photo.style.setProperty('--rotate-end', rotateEnd + 'deg');
-    
-    // Random animation duration
-    const duration = 5 + Math.random() * 2;
-    photo.style.animationDuration = duration + 's';
-    
-    document.body.appendChild(photo);
-    
-    // Remove photo after animation
-    setTimeout(() => {
-        photo.remove();
-    }, duration * 1000);
-}
-                            function back() {
-                                document.querySelector(".letter2").style.display = "none";
-                                document.querySelector(".letter-container").style.display = "block";
-                                document.querySelector(".letter-container").style.opacity = "1";
-                                document.querySelector(".letter-container h2").style.opacity = "1";
-                                document.querySelector(".letter-container p").style.opacity = "1";
-                            }
+    .greeting-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-                        </script>   
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+    .greeting-content h1 {
+        font-size: clamp(24px, 6vw, 40px);
+        text-align: center;
+        margin-bottom: 30px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: #c60808;
+        padding: 0 10px;
+    }
+
+    .mail-container {
+        position: relative;
+        width: min(320px, 90vw);
+        height: min(240px, 67.5vw);
+        background-color: #ca4853;
+        margin: 50px auto;
+        opacity: 1;
+    }
+
+    .left, .right {
+        position: absolute;
+        width: min(223px, 62.9vw);
+        height: 4px;
+        background-color: #ca4853;
+        top: 0;
+        transition: opacity 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    .left  {
+        left: 6px; 
+        transform: rotate(45deg); 
+        transform-origin: top left;
+    }
+
+    .right {
+        right: 6px;
+        transform: rotate(-45deg);
+        transform-origin: top right;
+    }
+
+    .left2, .right2 {
+        position: absolute;
+        width: min(226px, 63.7vw);
+        height: 4px;
+        background-color: #ca4853;
+        top: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .left2 {
+        left: 0;
+        transform: rotate(-45deg); 
+        transform-origin: top left;
+    }
+
+    .right2 {
+        right: 0;
+        transform: rotate(45deg);
+        transform-origin: top right;
+    }
+
+    .triangle-fill {
+        position: absolute;
+        bottom: min(240px, 67.5vw);
+        left: 5.5px;
+        width: min(310px, 87.4vw);
+        height: min(155px, 43.7vw); 
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        background-color: #ca4853;
+        border: 4px solid #bb404a;
+    }
+
+    .mail-btn {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 70px;    
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+
+    .mail-btn::before,
+    .mail-btn::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 80px;
+        background: rgb(246, 59, 59);
+        border-radius: 50px 50px 0 0;
+        top: 0;
+        left: 40px;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+        z-index: 0;
+    }
+
+    .mail-btn::after {
+        left: auto;
+        right: 40px;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+    }
+
+    .mail-btn:hover {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .mail-btn span {
+        position: relative;
+        z-index: 2; 
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        pointer-events: none; 
+    }
+
+    .letter-button {
+        position: absolute;
+        top: 15px;  
+        left: 20px; 
+        width: min(280px, 78.9vw);  
+        height: min(140px, 39.4vw); 
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        pointer-events: none;
+        background: rgb(234, 224, 224); 
+        clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+        z-index: 4;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 1s ease;
+        transform-origin: 50% 100%;
+    }
+
+    .letter-button:hover {
+        transform: scale(1.1);
+    }
+
+    .letter-container {
+        position: absolute;
+        width: min(450px, 95vw);
+        height: auto;
+        min-height: min(600px, 80vh);
+        background: rgb(234, 224, 224);
+        z-index: 0;
+        margin: 50px auto;
+        padding: 20px;
+        box-sizing: border-box;
+        transition: opacity 1s ease, transform 0.3s ease;
+        opacity: 0;
+        display: block;
+    }
+
+    .letter-container h2 {
+        font-size: clamp(28px, 8vw, 40px);
+        text-align: center;
+        margin-bottom: 30px;
+        font-family:'Brush Script MT', 'cursive';
+        color: #000000;
+        opacity: 0;
+    }
+
+    .letter-container p {
+        font-size: clamp(11px, 2.5vw, 12px);
+        margin-top: -20px;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: justify;
+        font-family:cursive;
+        color: #000000; 
+        opacity: 0;
+        line-height: 1.5;
+    }
+
+    .arrow { 
+        position: absolute;
+        width: clamp(30px, 8vw, 40px);
+        height: auto;
+        bottom: 1%;
+        right: 3%;
+        cursor: pointer;
+        pointer-events: auto;
+        z-index: 100;
+    }
+
+    .letter2 {
+        position: absolute;
+        width: min(450px, 95vw);
+        height: auto;
+        min-height: min(600px, 80vh);
+        background: rgb(234, 224, 224);
+        z-index: 0;
+        margin: 50px auto;
+        padding: 20px;
+        box-sizing: border-box;
+        opacity: 0;
+        display: none;
+    }
+
+    .letter2 h2 {
+        font-size: clamp(28px, 8vw, 40px);
+        text-align: center;
+        font-family:'Brush Script MT', 'cursive';
+        color: #000000;
+    }
+
+    .photobooth {
+        position: relative;
+        width: min(400px, 85vw);
+        height: auto;
+        margin: 20px auto;
+        display: block;
+        left: 0;
+        top: 0;
+    }
+
+    .backArrow {
+        position: absolute;
+        width: clamp(30px, 8vw, 40px);
+        height: auto;
+        bottom: 1%;
+        left: 3%;
+        cursor: pointer;
+    }
+
+    .letter2 h3 {
+        position: relative;
+        top: auto;
+        left: auto;
+        text-align: center;
+        font-size: clamp(24px, 7vw, 40px);
+        font-family:'Brush Script MT', 'cursive';
+        color: #000000;
+        margin: 20px 0;
+    }
+
+    .plushie {
+        position: relative;
+        width: min(400px, 85vw);
+        height: auto;
+        margin: 20px auto;
+        display: block;
+        left: 0;
+        top: 0;
+    }
+
+    .photo-confetti {
+        position: fixed;
+        width: clamp(50px, 15vw, 80px);
+        height: clamp(62.5px, 18.75vw, 100px);
+        background: white;
+        border: 3px solid #fff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        pointer-events: none;
+        animation: fall 3s ease-out forwards;
+        transform-origin: center;
+        z-index: 9999;
+    }
+
+    .photo-confetti img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @keyframes fall {
+        0% {
+            transform: translateY(0) rotate(0deg) scale(0);
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+            transform: translateY(-50px) rotate(var(--rotate-start)) scale(1);
+        }
+        100% {
+            transform: translateY(100vh) rotate(var(--rotate-end)) scale(0.8);
+            opacity: 0;
+        }
+    }
+
+    /* Mobile-specific adjustments */
+    @media (max-width: 480px) {
+        body {
+            padding: 5px;
+        }
+
+        .greeting-content h1 {
+            margin-bottom: 20px;
+        }
+
+        .mail-container {
+            margin: 30px auto;
+        }
+
+        .letter-container,
+        .letter2 {
+            margin: 20px auto;
+            padding: 15px;
+        }
+
+        .letter-container p {
+            margin-top: -10px;
+        }
+
+        .mail-btn {
+            width: 70px;
+            height: 60px;
+        }
+
+        .mail-btn::before,
+        .mail-btn::after {
+            width: 45px;
+            height: 70px;
+        }
+    }
+
+    /* Tablet adjustments */
+    @media (min-width: 481px) and (max-width: 768px) {
+        .letter-container,
+        .letter2 {
+            margin: 40px auto;
+        }
+    }
