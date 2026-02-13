@@ -159,7 +159,6 @@
     }
 
     .letter-container {
-        left:100px;
         position: absolute;
         width: 450px;
         height: 600px;
@@ -183,7 +182,7 @@
     .letter-container p {
         font-size: 12px;
         margin-top: -40px;
-        margin-left: 10px;
+        margin-left: 50px;
         margin-right: 10px;
         text-align: justify;
         font-family:cursive;
@@ -289,6 +288,7 @@
             opacity: 0;
         }
     }
+
 
 
 
