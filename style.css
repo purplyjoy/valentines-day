@@ -168,6 +168,9 @@
 
     .letter-container {
         position: absolute;
+        width: 90%;     
+        max-width: 600px; 
+        margin: 20px auto;
         width: 450px;
         height: 600px;
         background: rgb(234, 224, 224);
@@ -297,3 +300,4 @@
         }
 
     }
+
